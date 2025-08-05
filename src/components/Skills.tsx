@@ -44,6 +44,14 @@ const Skills = () => {
       skills: ['n8n', 'Ubuntu', 'Python', 'JavaScript'],
       color: 'cyan',
       description: 'Building intelligent automation workflows and AI-powered solutions'
+    },
+    {
+      id: 'cybersecurity',
+      title: 'Cybersecurity & Log Analysis',
+      icon: Brain,
+      skills: ['Wazuh', 'Splunk', 'Wireshark', 'Linux'],
+      color: 'purple',
+      description: 'Security monitoring, threat detection, and network analysis'
     }
   ];
 
