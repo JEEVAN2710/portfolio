@@ -95,6 +95,9 @@ const Footer = () => {
             <div className="text-gray-300 pl-2">
               <span className="text-yellow-400">●</span> SEEKING OPPORTUNITIES IN: Web Dev | Android | AI/ML
             </div>
+            <div className="text-gray-300 pl-2">
+              <span className="text-red-400">●</span> CYBERSECURITY ROLES: SOC Analyst | Security Engineer | Penetration Tester
+            </div>
             <div className="text-cyan-400 mt-2">
               <span className="animate-pulse">█</span>
             </div>
