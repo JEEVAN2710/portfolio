@@ -5,7 +5,7 @@ const Experience = () => {
   const internships = [
     {
       year: 'Present',
-      title: 'Intern',
+      title: 'INTERN',
       company: 'HaxSecurity',
       location: 'Remote',
       description: 'Working on cybersecurity solutions and security automation tools. Contributing to vulnerability assessment and penetration testing workflows.',
@@ -14,7 +14,7 @@ const Experience = () => {
     },
     {
       year: 'Jan 2024 - July 2024',
-      title: 'Junior Manager',
+      title: 'JUNIOR MANAGER',
       company: 'AIESEC Global Sector',
       location: 'Navi Mumbai',
       description: 'Conducted cold calling and lead generation for international volunteering programs. Built international partnerships and managed applicant tracking workflows.',
@@ -83,14 +83,18 @@ const Experience = () => {
 
             <div className="space-y-12">
               {internships.map((exp, index) => (
-                <div key={index} className="relative flex items-center md:flex-row">
+                <div key={index} className={`relative flex items-center ${
+                  index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+                }`}>
                   {/* Timeline Node */}
                   <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-gray-900 border-4 border-cyan-500 rounded-full flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-cyan-400"></div>
                   </div>
 
                   {/* Content */}
-                  <div className="ml-16 md:ml-0 md:w-1/2 md:pr-8">
+                  <div className={`ml-16 md:ml-0 md:w-1/2 ${
+                    index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'
+                  }`}>
                     <div className="bg-gray-900/50 border border-gray-700/50 rounded-xl p-6 backdrop-blur-sm">
                       <div className="flex items-center mb-3">
                         <Calendar className="w-5 h-5 text-cyan-400 mr-2" />
@@ -103,7 +107,7 @@ const Experience = () => {
                         <Briefcase className="w-4 h-4 mr-2" />
                         <span className="mr-4">{exp.company}</span>
                         <MapPin className="w-4 h-4 mr-2" />
-                        <span>Navi Mumbai</span>
+                        <span>{exp.location}</span>
                       </div>
 
                       <p className="text-gray-300 mb-4 leading-relaxed">{exp.description}</p>
