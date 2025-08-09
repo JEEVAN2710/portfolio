@@ -30,52 +30,52 @@ const Certificates = () => {
       icon: '🔐'
     },
     {
-      id: 'python-programming',
-      title: 'Python Programming Certification',
-      issuer: 'Programming Institute',
+      id: 'hackathon-certificate-1',
+      title: 'Hackathon Achievement Certificate',
+      issuer: 'Tech Competition',
       date: '2024',
-      category: 'Programming',
-      description: 'Advanced Python programming concepts including data structures, algorithms, and application development.',
-      skills: ['Python', 'Data Structures', 'Algorithms', 'Object-Oriented Programming'],
+      category: 'Hackathon',
+      description: 'Recognition for innovative solution development and competitive programming in hackathon event.',
+      skills: ['Problem Solving', 'Team Collaboration', 'Innovation', 'Time Management'],
       link: 'https://drive.google.com/file/d/1-MOfRw31KmtXlTfEY3SwPNAjbT7SMhNc/view?usp=sharing',
-      color: 'green',
-      icon: '🐍'
-    },
-    {
-      id: 'web-development',
-      title: 'Full Stack Web Development',
-      issuer: 'Tech Academy',
-      date: '2024',
-      category: 'Web Development',
-      description: 'Complete web development stack including frontend, backend, and database technologies.',
-      skills: ['HTML/CSS', 'JavaScript', 'React', 'Node.js', 'Database Management'],
-      link: 'https://drive.google.com/file/d/1diSR_Km2TwmhMprCrOrCT6Okv4vUpMEx/view?usp=sharing',
       color: 'purple',
-      icon: '🌐'
+      icon: '🏆'
     },
     {
-      id: 'ai-ml-fundamentals',
-      title: 'AI/ML Fundamentals',
-      issuer: 'Data Science Institute',
+      id: 'hackathon-certificate-2',
+      title: 'Coding Competition Certificate',
+      issuer: 'Development Challenge',
       date: '2024',
-      category: 'Artificial Intelligence',
-      description: 'Machine learning algorithms, data analysis, and AI implementation techniques.',
-      skills: ['Machine Learning', 'Data Analysis', 'Python', 'Neural Networks'],
+      category: 'Hackathon',
+      description: 'Achievement in competitive coding and software development challenge.',
+      skills: ['Competitive Programming', 'Algorithm Design', 'Software Development', 'Innovation'],
+      link: 'https://drive.google.com/file/d/1diSR_Km2TwmhMprCrOrCT6Okv4vUpMEx/view?usp=sharing',
+      color: 'green',
+      icon: '🥇'
+    },
+    {
+      id: 'technical-certificate-1',
+      title: 'Technical Skills Certificate',
+      issuer: 'Professional Institute',
+      date: '2024',
+      category: 'Technical Skills',
+      description: 'Certification in advanced technical skills and professional development.',
+      skills: ['Technical Expertise', 'Professional Development', 'Industry Standards', 'Best Practices'],
       link: 'https://drive.google.com/file/d/14qbycyWFyfIaE-F3utPubv-x1mviTqYt/view?usp=sharing',
       color: 'yellow',
-      icon: '🤖'
+      icon: '📜'
     },
     {
-      id: 'cloud-computing',
-      title: 'Cloud Computing Essentials',
-      issuer: 'Cloud Academy',
+      id: 'technical-certificate-2',
+      title: 'Professional Development Certificate',
+      issuer: 'Training Institute',
       date: '2024',
-      category: 'Cloud Technology',
-      description: 'Cloud infrastructure, deployment models, and cloud service management.',
-      skills: ['Cloud Architecture', 'AWS', 'DevOps', 'Infrastructure Management'],
+      category: 'Professional Development',
+      description: 'Professional training and skill development certification.',
+      skills: ['Professional Skills', 'Industry Knowledge', 'Career Development', 'Leadership'],
       link: 'https://drive.google.com/file/d/1b71Amm9X6cZR6u_QgiztFA005Q9T_Ai3/view?usp=sharing',
       color: 'cyan',
-      icon: '☁️'
+      icon: '🎓'
     }
   ];
 
