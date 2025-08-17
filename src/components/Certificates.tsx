@@ -1,81 +1,55 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Award, ExternalLink, Calendar, Building } from 'lucide-react';
 
 const Certificates = () => {
-  const [selectedCert, setSelectedCert] = useState<string | null>(null);
-
   const certificates = [
     {
-      id: 'cybersecurity-fundamentals',
-      title: 'Cybersecurity Fundamentals',
-      issuer: 'IBM SkillsBuild',
+      id: 'programming-java-nptel',
+      title: 'Programming in Java',
+      issuer: 'NPTEL',
+      date: '2024',
+      category: 'Programming',
+      description: 'Comprehensive Java programming course covering object-oriented programming concepts, data structures, and software development practices.',
+      skills: ['Java Programming', 'Object-Oriented Programming', 'Data Structures', 'Software Development'],
+      link: 'https://drive.google.com/file/d/1_WzKEgfEGMnYcqtePjykBfO4_zLAPizg/view?usp=drive_link',
+      color: 'blue',
+      icon: '☕'
+    },
+    {
+      id: 'python-data-science-nptel',
+      title: 'Python for Data Science',
+      issuer: 'NPTEL',
+      date: '2024',
+      category: 'Data Science',
+      description: 'Python programming for data science applications including data analysis, visualization, and machine learning fundamentals.',
+      skills: ['Python Programming', 'Data Analysis', 'Data Visualization', 'Machine Learning'],
+      link: 'https://drive.google.com/file/d/10SIvlFZo4IqEYuISj80Szr0wVEyL2JZ2/view?usp=drive_link',
+      color: 'green',
+      icon: '🐍'
+    },
+    {
+      id: 'wazuh-siem-challenge',
+      title: 'Wazuh SIEM Challenge',
+      issuer: 'Haxcamp',
       date: '2024',
       category: 'Cybersecurity',
-      description: 'Comprehensive understanding of cybersecurity principles, threat landscape, and security best practices.',
-      skills: ['Security Fundamentals', 'Threat Analysis', 'Risk Assessment', 'Security Policies'],
-      link: 'https://drive.google.com/file/d/1_WzKEgfEGMnYcqtePjykBfO4_zLAPizg/view',
+      description: 'Hands-on challenge demonstrating proficiency in Wazuh SIEM implementation, log analysis, and security monitoring.',
+      skills: ['Wazuh SIEM', 'Log Analysis', 'Security Monitoring', 'Threat Detection'],
+      link: 'https://drive.google.com/file/d/14qbycyWFyfIaE-F3utPubv-x1mviTqYt/view?usp=drive_link',
       color: 'red',
       icon: '🛡️'
     },
     {
-      id: 'introduction-cybersecurity',
-      title: 'Introduction to Cybersecurity',
-      issuer: 'Cisco Networking Academy',
+      id: 'wireshark-challenge',
+      title: 'Wireshark Challenge',
+      issuer: 'Haxcamp',
       date: '2024',
       category: 'Cybersecurity',
-      description: 'Foundation course covering cybersecurity concepts, network security, and digital forensics.',
-      skills: ['Network Security', 'Digital Forensics', 'Incident Response', 'Security Tools'],
-      link: 'https://drive.google.com/file/d/10SIvlFZo4IqEYuISj80Szr0wVEyL2JZ2/view',
-      color: 'blue',
-      icon: '🔐'
-    },
-    {
-      id: 'hackathon-certificate-1',
-      title: 'Hackathon Achievement Certificate',
-      issuer: 'Tech Competition',
-      date: '2024',
-      category: 'Hackathon',
-      description: 'Recognition for innovative solution development and competitive programming in hackathon event.',
-      skills: ['Problem Solving', 'Team Collaboration', 'Innovation', 'Time Management'],
-      link: 'https://drive.google.com/file/d/1-MOfRw31KmtXlTfEY3SwPNAjbT7SMhNc/view?usp=sharing',
+      description: 'Network analysis challenge using Wireshark for packet capture, protocol analysis, and network troubleshooting.',
+      skills: ['Wireshark', 'Network Analysis', 'Packet Capture', 'Protocol Analysis'],
+      link: 'https://drive.google.com/file/d/1b71Amm9X6cZR6u_QgiztFA005Q9T_Ai3/view?usp=drive_link',
       color: 'purple',
-      icon: '🏆'
-    },
-    {
-      id: 'hackathon-certificate-2',
-      title: 'Coding Competition Certificate',
-      issuer: 'Development Challenge',
-      date: '2024',
-      category: 'Hackathon',
-      description: 'Achievement in competitive coding and software development challenge.',
-      skills: ['Competitive Programming', 'Algorithm Design', 'Software Development', 'Innovation'],
-      link: 'https://drive.google.com/file/d/1diSR_Km2TwmhMprCrOrCT6Okv4vUpMEx/view?usp=sharing',
-      color: 'green',
-      icon: '🥇'
-    },
-    {
-      id: 'technical-certificate-1',
-      title: 'Technical Skills Certificate',
-      issuer: 'Professional Institute',
-      date: '2024',
-      category: 'Technical Skills',
-      description: 'Certification in advanced technical skills and professional development.',
-      skills: ['Technical Expertise', 'Professional Development', 'Industry Standards', 'Best Practices'],
-      link: 'https://drive.google.com/file/d/14qbycyWFyfIaE-F3utPubv-x1mviTqYt/view?usp=sharing',
-      color: 'yellow',
-      icon: '📜'
-    },
-    {
-      id: 'technical-certificate-2',
-      title: 'Professional Development Certificate',
-      issuer: 'Training Institute',
-      date: '2024',
-      category: 'Professional Development',
-      description: 'Professional training and skill development certification.',
-      skills: ['Professional Skills', 'Industry Knowledge', 'Career Development', 'Leadership'],
-      link: 'https://drive.google.com/file/d/1b71Amm9X6cZR6u_QgiztFA005Q9T_Ai3/view?usp=sharing',
-      color: 'cyan',
-      icon: '🎓'
+      icon: '🔍'
     }
   ];
 
@@ -121,11 +95,9 @@ const Certificates = () => {
           {certificates.map((cert) => (
             <div
               key={cert.id}
-              className="group relative cursor-pointer"
-              onMouseEnter={() => setSelectedCert(cert.id)}
-              onMouseLeave={() => setSelectedCert(null)}
+              className="group relative"
             >
-              <div className={`relative bg-gray-900/50 border rounded-xl p-6 backdrop-blur-sm transition-all duration-300 hover:scale-105 ${
+              <div className={`relative bg-gray-900/50 border rounded-xl p-6 backdrop-blur-sm transition-all duration-300 ${
                 colorClasses[cert.color as keyof typeof colorClasses]
               }`}>
                 {/* Certificate Icon */}
@@ -159,8 +131,8 @@ const Certificates = () => {
                 </p>
 
                 {/* Skills Tags */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {cert.skills.slice(0, 3).map((skill, index) => (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {cert.skills.map((skill, index) => (
                     <span
                       key={index}
                       className="px-2 py-1 bg-gray-800/50 border border-gray-600/50 rounded-full text-xs font-mono text-gray-300"
@@ -168,11 +140,6 @@ const Certificates = () => {
                       {skill}
                     </span>
                   ))}
-                  {cert.skills.length > 3 && (
-                    <span className="px-2 py-1 bg-gray-800/50 border border-gray-600/50 rounded-full text-xs font-mono text-gray-400">
-                      +{cert.skills.length - 3} more
-                    </span>
-                  )}
                 </div>
 
                 {/* View Certificate Button */}
@@ -180,38 +147,11 @@ const Certificates = () => {
                   href={cert.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center space-x-2 text-orange-400 hover:text-orange-300 transition-colors duration-300 font-mono text-sm"
+                  className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-400 to-red-500 text-white px-4 py-2 rounded-lg font-orbitron font-bold hover:from-orange-500 hover:to-red-600 transition-all duration-300 w-full justify-center"
                 >
                   <ExternalLink className="w-4 h-4" />
                   <span>VIEW CERTIFICATE</span>
                 </a>
-
-                {/* Hover Overlay */}
-                {selectedCert === cert.id && (
-                  <div className="absolute inset-0 bg-black/90 rounded-xl flex items-center justify-center p-6 backdrop-blur-sm">
-                    <div className="text-center">
-                      <div className="text-4xl mb-4">{cert.icon}</div>
-                      <h4 className="font-orbitron text-lg font-bold text-white mb-2">
-                        {cert.title}
-                      </h4>
-                      <p className="text-gray-300 text-sm mb-4">
-                        Issued by {cert.issuer}
-                      </p>
-                      <div className="flex flex-wrap gap-1 justify-center">
-                        {cert.skills.map((skill, index) => (
-                          <span
-                            key={index}
-                            className={`px-2 py-1 rounded-full text-xs font-mono ${
-                              colorClasses[cert.color as keyof typeof colorClasses]
-                            }`}
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             </div>
           ))}
